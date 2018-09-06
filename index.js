@@ -43,10 +43,10 @@ function viewCart() {
 
      
 function total() {
-  var numbers = cart.itemPrice 
+  
   var sum;
-  for (let i=0; i < numbers; i++) {
-    sum += numbers[i];
+  for (let i=0; i < getCart().itemPrice; i++) {
+    sum += getCart.itemPrice[i];
   
   }
   return `$${sum}`
