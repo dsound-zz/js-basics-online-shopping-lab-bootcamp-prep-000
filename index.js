@@ -43,7 +43,7 @@ function viewCart() {
 
      
 function total() {
-  return getCart().getSum
+  
 }
 
 function removeFromCart(item) {
