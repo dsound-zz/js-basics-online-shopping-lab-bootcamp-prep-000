@@ -47,9 +47,8 @@ function total() {
   var sum;
   for (let i=0; i < getCart().itemPrice; i++) {
     sum += getCart.itemPrice[i];
-  
-  }
-  return `$${sum}`
+ }
+  return sum
 }
 
 function removeFromCart(item) {
