@@ -44,11 +44,11 @@ function viewCart() {
      
 function total() {
   
-  var sum;
+ var totalPrice = null 
   for (let i=0; i < getCart().itemPrice; i++) {
-    sum += getCart.itemPrice[i];
+     totalPrice += getCart.itemPrice[i];
  }
-  return sum
+  return `$${totalPrice}`
 }
 
 function removeFromCart(item) {
