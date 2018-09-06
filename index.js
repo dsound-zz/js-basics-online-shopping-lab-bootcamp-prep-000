@@ -44,9 +44,9 @@ function viewCart() {
      
 function total() {
   
- var totalPrice = null 
-  for (let i=0; i < getCart().itemPrice.length; i++) {
-     totalPrice += getCart().itemPrice[i];
+ var totalPrice; 
+  for (let i=0; i < getCart().length; i++) {
+     totalPrice += getCart()[i].itemPrice;
  }
   return `$${totalPrice}`
 }
