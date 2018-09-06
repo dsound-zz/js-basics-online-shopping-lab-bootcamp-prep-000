@@ -71,5 +71,4 @@ function placeOrder(cardNumber) {
      
    }
    
- 
-}
+ }
