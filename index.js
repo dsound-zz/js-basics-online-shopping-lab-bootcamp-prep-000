@@ -51,8 +51,13 @@ function total() {
   return totalPrice
 }
 
-function removeFromCart(item) {
-  // write your code here
+function removeFromCart(name) {
+  for (let i=0; i < cart.length; i++) {
+    if (cart[i].itemName === name) {
+      cart.splice()
+    }
+  
+  }
 }
 
 function placeOrder(cardNumber) {
