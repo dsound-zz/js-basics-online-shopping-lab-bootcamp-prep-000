@@ -19,19 +19,31 @@ cart.push(newItem)
 
 
 function viewCart() {
-  var cartAdd = [];
  
-   if (cart.length === 0) {
-    return "Your shopping cart is empty." }
+ 
+  if (cart.length === 0) {
+    return "Your shopping cart is empty." 
+    
+  }
   
-   else if (cart.length === 1) {
-     return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
-   }
-     
-}     
+  else if (getCart().length === 1) {
+    return `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`
+  }
+  else if (getCart().length === 2) {
+    return `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}, and ${getCart()[1].itemName} at $${getCart()[1].itemPrice}.`
+  }
+    var results = "In your cart, you have "
+    for (let i=0; i < getCart().length -1; i++) {
+      results += getCart()[i].itemName + " at $" + getCart()[i].itemPrice + ", "
+    }
+    results += "and " + getCart()[getCart().length-1].itemName + " at $" + getCart()[getCart().length-1].itemPrice + "."  
+    return results 
+    
+}
+
      
 function total() {
-  // write your code here
+  return getCart().getSum
 }
 
 function removeFromCart(item) {
